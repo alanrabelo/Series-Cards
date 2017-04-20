@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cwv-hO-oGu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Your Words-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Series_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFY-0O-6O5" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="16" y="90" width="343" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92410999540000005" green="0.041183643040000002" blue="0.26626214390000003" alpha="0.6385648544520548" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EFY-0O-6O5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="90" id="22p-Eg-4RS"/>
+                            <constraint firstItem="EFY-0O-6O5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="NIh-cm-ffU"/>
+                            <constraint firstAttribute="trailing" secondItem="EFY-0O-6O5" secondAttribute="trailing" constant="16" id="TS1-xT-9X8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EFY-0O-6O5" secondAttribute="bottom" constant="24" id="qzr-CW-W1Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your Words" id="dfs-1r-COU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vYf-VV-HHE">
+                            <connections>
+                                <segue destination="je4-HS-1DX" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="gAO-oK-1Vs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="kolodaView" destination="EFY-0O-6O5" id="ViW-OG-dAW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2015.2" y="131.78410794602701"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="D0O-EW-0ay">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Cwv-hO-oGu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="roa-Pk-cvV">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.92410999540000005" green="0.041183643040000002" blue="0.26626214390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ev0-yR-RsR" kind="relationship" relationship="viewControllers" id="Rde-6q-3FY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DLt-nm-r48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="DBh-Fx-56n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ev0-yR-RsR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="HOME" selectedImage="HOME" id="fOi-wK-0i8">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="XGA-8Q-vzd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.92410999540000005" green="0.041183643040000002" blue="0.26626214390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="i5i-3U-tda"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Af8-v6-KMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="131.78410794602701"/>
+        </scene>
+        <!--Your Words-->
+        <scene sceneID="vTX-Jc-ffp">
+            <objects>
+                <exit id="dKa-pZ-zpY" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1VO-U5-cAT" sceneMemberID="firstResponder"/>
+                <viewController id="je4-HS-1DX" customClass="NewWordViewController" customModule="Series_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UUo-7p-kYN"/>
+                        <viewControllerLayoutGuide type="bottom" id="4H7-I8-vzR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hqr-lW-m8Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnR-xp-M1f">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                <color key="barTintColor" red="0.92410999540000005" green="0.041183643040000002" blue="0.26626214390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="New Word" id="pJc-KO-vL1">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="ExH-oS-BrA">
+                                            <connections>
+                                                <action selector="exit:" destination="je4-HS-1DX" id="ZPw-Di-CoU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Xgq-TN-2ui">
+                                            <connections>
+                                                <action selector="saveWord:" destination="je4-HS-1DX" id="Bnj-J2-eh6"/>
+                                                <segue destination="dKa-pZ-zpY" kind="unwind" unwindAction="unwindFromSegue:" id="EDf-BJ-dEx"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word in English" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6it-b3-seu">
+                                <rect key="frame" x="16" y="86" width="343" height="40"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cat-cl-pke"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes"/>
+                                <connections>
+                                    <action selector="changedWord:" destination="je4-HS-1DX" eventType="editingChanged" id="gFW-5R-Mje"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Translation" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bwZ-Qb-vEc">
+                                <rect key="frame" x="16" y="134" width="343" height="40"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3VS-cs-4Wp"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <action selector="changedTranslation:" destination="je4-HS-1DX" eventType="editingChanged" id="CeQ-Ni-k77"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Brief Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h72-Ch-ekq">
+                                <rect key="frame" x="16" y="182" width="343" height="465"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92410999540000005" green="0.51235559725322177" blue="0.58836028228542347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bwZ-Qb-vEc" firstAttribute="trailing" secondItem="Hqr-lW-m8Q" secondAttribute="trailingMargin" id="5Y4-AK-Whp"/>
+                            <constraint firstItem="hnR-xp-M1f" firstAttribute="height" secondItem="Hqr-lW-m8Q" secondAttribute="height" multiplier="0.1" id="8Wf-dw-UAh"/>
+                            <constraint firstItem="h72-Ch-ekq" firstAttribute="top" secondItem="bwZ-Qb-vEc" secondAttribute="bottom" constant="8" id="B8g-zR-xh8"/>
+                            <constraint firstItem="h72-Ch-ekq" firstAttribute="trailing" secondItem="Hqr-lW-m8Q" secondAttribute="trailingMargin" id="ERL-ah-YJX"/>
+                            <constraint firstAttribute="trailing" secondItem="hnR-xp-M1f" secondAttribute="trailing" id="Qlj-wd-o7H"/>
+                            <constraint firstItem="bwZ-Qb-vEc" firstAttribute="leading" secondItem="Hqr-lW-m8Q" secondAttribute="leadingMargin" id="S0t-uz-GLq"/>
+                            <constraint firstItem="bwZ-Qb-vEc" firstAttribute="top" secondItem="6it-b3-seu" secondAttribute="bottom" constant="8" id="Syw-cs-Ctj"/>
+                            <constraint firstItem="h72-Ch-ekq" firstAttribute="leading" secondItem="Hqr-lW-m8Q" secondAttribute="leadingMargin" id="djE-TT-H2i"/>
+                            <constraint firstItem="6it-b3-seu" firstAttribute="trailing" secondItem="Hqr-lW-m8Q" secondAttribute="trailingMargin" id="ekD-io-nGw"/>
+                            <constraint firstItem="4H7-I8-vzR" firstAttribute="top" secondItem="h72-Ch-ekq" secondAttribute="bottom" constant="20" id="nHz-qx-rZd"/>
+                            <constraint firstItem="6it-b3-seu" firstAttribute="leading" secondItem="Hqr-lW-m8Q" secondAttribute="leadingMargin" id="nYL-Vi-r7N"/>
+                            <constraint firstItem="hnR-xp-M1f" firstAttribute="leading" secondItem="Hqr-lW-m8Q" secondAttribute="leading" id="rKm-rj-SjO"/>
+                            <constraint firstItem="hnR-xp-M1f" firstAttribute="top" secondItem="Hqr-lW-m8Q" secondAttribute="top" id="vS7-Cv-w05"/>
+                            <constraint firstItem="6it-b3-seu" firstAttribute="top" secondItem="hnR-xp-M1f" secondAttribute="bottom" constant="19.5" id="xQJ-if-Vjd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your Words" id="OPx-jG-AeS"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="saveButton" destination="Xgq-TN-2ui" id="Swq-UW-gty"/>
+                        <outlet property="textFieldTranslation" destination="bwZ-Qb-vEc" id="gMm-ge-dqA"/>
+                        <outlet property="textFieldWord" destination="6it-b3-seu" id="sEo-j0-PxT"/>
+                        <outlet property="textViewDescription" destination="h72-Ch-ekq" id="owt-wn-hsU"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2792.8000000000002" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="HOME" width="32" height="32"/>
+    </resources>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
