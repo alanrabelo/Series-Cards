@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Your Words-->
+        <!--Suas Palavras-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Series_Cards" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.92410999540000005" green="0.041183643040000002" blue="0.26626214390000003" alpha="0.6385648544520548" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.5147128807106599" green="0.026038041135941391" blue="0.15789233731085273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="EFY-0O-6O5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="90" id="22p-Eg-4RS"/>
                             <constraint firstItem="EFY-0O-6O5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="NIh-cm-ffU"/>
@@ -36,16 +36,18 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EFY-0O-6O5" secondAttribute="bottom" constant="24" id="qzr-CW-W1Z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Words" id="dfs-1r-COU">
+                    <navigationItem key="navigationItem" title="Suas Palavras" id="dfs-1r-COU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vYf-VV-HHE">
                             <connections>
-                                <segue destination="je4-HS-1DX" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="gAO-oK-1Vs"/>
+                                <action selector="addNewWord:" destination="BYZ-38-t0r" id="POS-1r-zwf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="kolodaView" destination="EFY-0O-6O5" id="ViW-OG-dAW"/>
+                        <segue destination="je4-HS-1DX" kind="presentation" identifier="newWord" id="zmC-Sz-K1Q"/>
+                        <segue destination="qaB-fs-JKR" kind="presentation" identifier="ShowAuthentication" id="Nkk-zD-gNb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -59,6 +61,7 @@
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="roa-Pk-cvV">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,11 +85,11 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="XGA-8Q-vzd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XGA-8Q-vzd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.92410999540000005" green="0.041183643040000002" blue="0.26626214390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.92549019607843142" green="0.043137254901960784" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
@@ -103,8 +106,6 @@
         <!--Your Words-->
         <scene sceneID="vTX-Jc-ffp">
             <objects>
-                <exit id="dKa-pZ-zpY" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1VO-U5-cAT" sceneMemberID="firstResponder"/>
                 <viewController id="je4-HS-1DX" customClass="NewWordViewController" customModule="Series_Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UUo-7p-kYN"/>
@@ -116,18 +117,20 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnR-xp-M1f">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                <gestureRecognizers/>
                                 <color key="barTintColor" red="0.92410999540000005" green="0.041183643040000002" blue="0.26626214390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="New Word" id="pJc-KO-vL1">
+                                    <navigationItem title="Nova Palavra" id="pJc-KO-vL1">
                                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="ExH-oS-BrA">
                                             <connections>
                                                 <action selector="exit:" destination="je4-HS-1DX" id="ZPw-Di-CoU"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Xgq-TN-2ui">
+                                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="Xgq-TN-2ui">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="saveWord:" destination="je4-HS-1DX" id="Bnj-J2-eh6"/>
                                                 <segue destination="dKa-pZ-zpY" kind="unwind" unwindAction="unwindFromSegue:" id="EDf-BJ-dEx"/>
@@ -135,8 +138,11 @@
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="JtQ-mQ-xqJ" appends="YES" id="5Qh-9x-FY8"/>
+                                </connections>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Word in English" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6it-b3-seu">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Palavra em Inglês" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6it-b3-seu">
                                 <rect key="frame" x="16" y="86" width="343" height="40"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -149,7 +155,7 @@
                                     <action selector="changedWord:" destination="je4-HS-1DX" eventType="editingChanged" id="gFW-5R-Mje"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Translation" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bwZ-Qb-vEc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tradução" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bwZ-Qb-vEc">
                                 <rect key="frame" x="16" y="134" width="343" height="40"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -162,7 +168,7 @@
                                     <action selector="changedTranslation:" destination="je4-HS-1DX" eventType="editingChanged" id="CeQ-Ni-k77"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Brief Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h72-Ch-ekq">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h72-Ch-ekq">
                                 <rect key="frame" x="16" y="182" width="343" height="465"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -170,7 +176,8 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.92410999540000005" green="0.51235559725322177" blue="0.58836028228542347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.76078431372549016" green="0.039215686274509803" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="bwZ-Qb-vEc" firstAttribute="trailing" secondItem="Hqr-lW-m8Q" secondAttribute="trailingMargin" id="5Y4-AK-Whp"/>
                             <constraint firstItem="hnR-xp-M1f" firstAttribute="height" secondItem="Hqr-lW-m8Q" secondAttribute="height" multiplier="0.1" id="8Wf-dw-UAh"/>
@@ -187,6 +194,9 @@
                             <constraint firstItem="hnR-xp-M1f" firstAttribute="top" secondItem="Hqr-lW-m8Q" secondAttribute="top" id="vS7-Cv-w05"/>
                             <constraint firstItem="6it-b3-seu" firstAttribute="top" secondItem="hnR-xp-M1f" secondAttribute="bottom" constant="19.5" id="xQJ-if-Vjd"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bRW-fH-zP5" appends="YES" id="eML-9a-eRc"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Your Words" id="OPx-jG-AeS"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -197,12 +207,230 @@
                         <outlet property="textViewDescription" destination="h72-Ch-ekq" id="owt-wn-hsU"/>
                     </connections>
                 </viewController>
+                <exit id="dKa-pZ-zpY" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1VO-U5-cAT" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bRW-fH-zP5">
+                    <connections>
+                        <action selector="dismiss1:" destination="je4-HS-1DX" id="QU3-bY-AzM"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="JtQ-mQ-xqJ">
+                    <connections>
+                        <action selector="dismiss2:" destination="je4-HS-1DX" id="sxU-d2-a4y"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2792.8000000000002" y="131.78410794602701"/>
+            <point key="canvasLocation" x="2902" y="132"/>
+        </scene>
+        <!--Your Words-->
+        <scene sceneID="jjY-yn-HGp">
+            <objects>
+                <viewController id="qaB-fs-JKR" customClass="SignUpViewController" customModule="Series_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3IS-5I-YKD"/>
+                        <viewControllerLayoutGuide type="bottom" id="JOh-Y9-H64"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Z7C-K5-eDP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uar-eP-dF9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                <color key="barTintColor" red="0.92410999540000005" green="0.041183643040000002" blue="0.26626214390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Cadastre-se" id="Ues-kt-f8f">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="Pyr-A3-TMy">
+                                            <connections>
+                                                <action selector="dismissView:" destination="qaB-fs-JKR" id="QFH-ao-JnX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Vamos lá" id="pQB-O6-GGU">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="signUp:" destination="qaB-fs-JKR" id="rhW-qB-u4o"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QMx-Gd-Hu0">
+                                <rect key="frame" x="16" y="86" width="343" height="40"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="536-Hu-RkN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jI0-Kh-JsC">
+                                <rect key="frame" x="16" y="134" width="343" height="40"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Wvo-0X-VnB"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-type your password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hId-0U-8Fe">
+                                <rect key="frame" x="16" y="182" width="343" height="40"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="G5E-KN-yEn"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2B-X7-VYg">
+                                <rect key="frame" x="16" y="242" width="343" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="QPX-v3-6rt"/>
+                                </constraints>
+                                <state key="normal" title="Já possui cadastro?"/>
+                                <connections>
+                                    <segue destination="51P-dy-Iag" kind="presentation" id="h5J-3U-deK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76078431372549016" green="0.039215686274509803" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jI0-Kh-JsC" firstAttribute="top" secondItem="QMx-Gd-Hu0" secondAttribute="bottom" constant="8" id="1cu-eh-HNv"/>
+                            <constraint firstItem="QMx-Gd-Hu0" firstAttribute="leading" secondItem="Z7C-K5-eDP" secondAttribute="leadingMargin" id="6t0-AM-z0p"/>
+                            <constraint firstItem="uar-eP-dF9" firstAttribute="top" secondItem="Z7C-K5-eDP" secondAttribute="top" id="9WL-4P-6Eq"/>
+                            <constraint firstItem="hId-0U-8Fe" firstAttribute="leading" secondItem="Z7C-K5-eDP" secondAttribute="leadingMargin" id="Dto-dh-ild"/>
+                            <constraint firstAttribute="trailing" secondItem="uar-eP-dF9" secondAttribute="trailing" id="IX3-Xy-HET"/>
+                            <constraint firstItem="uar-eP-dF9" firstAttribute="height" secondItem="Z7C-K5-eDP" secondAttribute="height" multiplier="0.1" id="JNP-4v-gVo"/>
+                            <constraint firstItem="QMx-Gd-Hu0" firstAttribute="trailing" secondItem="Z7C-K5-eDP" secondAttribute="trailingMargin" id="Mcj-zT-otr"/>
+                            <constraint firstItem="c2B-X7-VYg" firstAttribute="trailing" secondItem="Z7C-K5-eDP" secondAttribute="trailingMargin" id="NMl-oU-b8n"/>
+                            <constraint firstItem="uar-eP-dF9" firstAttribute="leading" secondItem="Z7C-K5-eDP" secondAttribute="leading" id="PMm-QD-UaV"/>
+                            <constraint firstItem="c2B-X7-VYg" firstAttribute="leading" secondItem="Z7C-K5-eDP" secondAttribute="leadingMargin" id="RRV-yt-ACW"/>
+                            <constraint firstItem="c2B-X7-VYg" firstAttribute="top" secondItem="hId-0U-8Fe" secondAttribute="bottom" constant="20" id="RbL-4Q-zzR"/>
+                            <constraint firstItem="jI0-Kh-JsC" firstAttribute="leading" secondItem="Z7C-K5-eDP" secondAttribute="leadingMargin" id="jmE-Qf-cxH"/>
+                            <constraint firstItem="hId-0U-8Fe" firstAttribute="top" secondItem="jI0-Kh-JsC" secondAttribute="bottom" constant="8" id="koa-u8-2Ti"/>
+                            <constraint firstItem="hId-0U-8Fe" firstAttribute="trailing" secondItem="Z7C-K5-eDP" secondAttribute="trailingMargin" id="lsZ-V9-OSo"/>
+                            <constraint firstItem="jI0-Kh-JsC" firstAttribute="trailing" secondItem="Z7C-K5-eDP" secondAttribute="trailingMargin" id="ovR-Ht-Vau"/>
+                            <constraint firstItem="QMx-Gd-Hu0" firstAttribute="top" secondItem="uar-eP-dF9" secondAttribute="bottom" constant="19.5" id="uMl-3G-Jvw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your Words" id="luR-j0-Mow"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="textFieldEmail" destination="QMx-Gd-Hu0" id="kaA-DA-qyc"/>
+                        <outlet property="textFieldPassword" destination="jI0-Kh-JsC" id="LxM-hM-I5J"/>
+                        <outlet property="textFieldPasswordConfirmation" destination="hId-0U-8Fe" id="qbY-au-pi3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0u-nh-gbS" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2049" y="1037"/>
+        </scene>
+        <!--Your Words-->
+        <scene sceneID="s3x-HM-XF2">
+            <objects>
+                <viewController id="51P-dy-Iag" customClass="SignInViewController" customModule="Series_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nMl-sw-1Of"/>
+                        <viewControllerLayoutGuide type="bottom" id="dO8-Fw-XYk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0fW-98-bJl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rt8-rv-2cE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                <color key="barTintColor" red="0.92410999540000005" green="0.041183643040000002" blue="0.26626214390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Faça seu login" id="ty3-Fv-NAR">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="ftA-ra-E7u">
+                                            <connections>
+                                                <action selector="dismissView:" destination="51P-dy-Iag" id="dXj-FN-6Wu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Vamos lá" id="Ipl-zm-sPZ">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="signUp:" destination="51P-dy-Iag" id="17R-CB-typ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDu-9G-SO5">
+                                <rect key="frame" x="16" y="86" width="343" height="40"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dci-tg-eX2"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ksY-LE-01u">
+                                <rect key="frame" x="16" y="134" width="343" height="40"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lU2-rx-TTD"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCU-7K-LF5">
+                                <rect key="frame" x="16" y="194" width="343" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="ebp-mp-kEW"/>
+                                    <constraint firstAttribute="height" constant="32" id="pkD-jf-l9B"/>
+                                </constraints>
+                                <state key="normal" title="Ainda não possui cadastro?"/>
+                                <connections>
+                                    <segue destination="qaB-fs-JKR" kind="presentation" id="P9k-fI-hfM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76078431372549016" green="0.039215686274509803" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nDu-9G-SO5" firstAttribute="trailing" secondItem="0fW-98-bJl" secondAttribute="trailingMargin" id="0Sd-7a-BQs"/>
+                            <constraint firstItem="QCU-7K-LF5" firstAttribute="leading" secondItem="0fW-98-bJl" secondAttribute="leadingMargin" id="1Fi-QY-E9f"/>
+                            <constraint firstItem="QCU-7K-LF5" firstAttribute="leading" secondItem="0fW-98-bJl" secondAttribute="leadingMargin" id="AXR-qM-Yc9"/>
+                            <constraint firstItem="rt8-rv-2cE" firstAttribute="leading" secondItem="0fW-98-bJl" secondAttribute="leading" id="KYQ-wF-vFE"/>
+                            <constraint firstItem="ksY-LE-01u" firstAttribute="leading" secondItem="0fW-98-bJl" secondAttribute="leadingMargin" id="LuY-a7-RGs"/>
+                            <constraint firstItem="rt8-rv-2cE" firstAttribute="height" secondItem="0fW-98-bJl" secondAttribute="height" multiplier="0.1" id="WQZ-Xu-pa0"/>
+                            <constraint firstItem="QCU-7K-LF5" firstAttribute="top" secondItem="ksY-LE-01u" secondAttribute="bottom" constant="20" id="bxY-vB-yyw"/>
+                            <constraint firstItem="ksY-LE-01u" firstAttribute="trailing" secondItem="0fW-98-bJl" secondAttribute="trailingMargin" id="fhM-eP-UDu"/>
+                            <constraint firstItem="nDu-9G-SO5" firstAttribute="top" secondItem="rt8-rv-2cE" secondAttribute="bottom" constant="19.5" id="jUT-3Y-R89"/>
+                            <constraint firstItem="ksY-LE-01u" firstAttribute="top" secondItem="nDu-9G-SO5" secondAttribute="bottom" constant="8" id="q16-Tm-bah"/>
+                            <constraint firstAttribute="trailing" secondItem="rt8-rv-2cE" secondAttribute="trailing" id="qGS-gj-zCM"/>
+                            <constraint firstItem="rt8-rv-2cE" firstAttribute="top" secondItem="0fW-98-bJl" secondAttribute="top" id="t5U-16-41O"/>
+                            <constraint firstItem="nDu-9G-SO5" firstAttribute="leading" secondItem="0fW-98-bJl" secondAttribute="leadingMargin" id="uRv-KS-6GQ"/>
+                            <constraint firstItem="QCU-7K-LF5" firstAttribute="trailing" secondItem="0fW-98-bJl" secondAttribute="trailingMargin" id="vvS-X5-Cm9"/>
+                            <constraint firstItem="QCU-7K-LF5" firstAttribute="trailing" secondItem="0fW-98-bJl" secondAttribute="trailingMargin" id="xPp-La-Nbn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your Words" id="Qxc-Tr-PKT"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="textFieldEmail" destination="nDu-9G-SO5" id="y8G-3V-OjY"/>
+                        <outlet property="textFieldPassword" destination="ksY-LE-01u" id="9oN-Ew-SIL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEm-3I-fjn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2793" y="1037"/>
         </scene>
     </scenes>
     <resources>
         <image name="HOME" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="P9k-fI-hfM"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

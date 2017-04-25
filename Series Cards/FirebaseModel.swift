@@ -37,6 +37,11 @@ extension FirebaseModel {
         
     }
     
+    func save(withId id : String) {
+        let reference = FIRDatabase.database().reference().child(self.className).child(id)
+        reference.setValue(self.toJSON())
+    }
+    
     static func all(withCompletion completion : @escaping ([AnyObject])->Void) {
         let reference = FIRDatabase.database().reference().child(self.className)
         

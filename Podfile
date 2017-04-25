@@ -6,6 +6,7 @@ target 'Series Cards' do
   use_frameworks!
 pod 'Koloda', '~> 4.0'
 pod 'Firebase/Database'
+pod 'Firebase/Auth'
 pod 'SVProgressHUD', '~> 2.0'
   # Pods for Series Cards
 

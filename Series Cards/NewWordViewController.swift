@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class NewWordViewController: UIViewController {
 
@@ -20,25 +21,22 @@ class NewWordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         saveButton.isEnabled = false
         textFieldWord.becomeFirstResponder()
     }
-
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func dismiss1(_ sender: Any) {
+        resignTextFields()
     }
-    */
+    @IBAction func dismiss2(_ sender: Any) {
+        resignTextFields()
+    }
 
     @IBAction func saveWord(_ sender: UIBarButtonItem) {
+        resignTextFields()
+    }
+    
+    func resignTextFields()  {
         textFieldWord.resignFirstResponder()
         textFieldTranslation.resignFirstResponder()
         textViewDescription.resignFirstResponder()

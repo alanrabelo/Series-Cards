@@ -10,6 +10,8 @@
 		3E2E57A64A82AC726CC5E455 /* Pods_Series_CardsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404C54BC0BA55EF3142F044A /* Pods_Series_CardsUITests.framework */; };
 		6302EA995F19537F4EEB4BF9 /* Pods_Series_Cards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E6BEFE0AAA24B3BD9D9724 /* Pods_Series_Cards.framework */; };
 		914CF65335CCFBB526959229 /* Pods_Series_CardsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EE2BF49AE5397F3F9A81C8 /* Pods_Series_CardsTests.framework */; };
+		E70EF2D31EA94B0C0045C8C1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70EF2D21EA94B0C0045C8C1 /* CloudKit.framework */; };
+		E70EF2D51EA94B290045C8C1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70EF2D41EA94B290045C8C1 /* User.swift */; };
 		E78AF7921EA91D8F00AF7A83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78AF7911EA91D8F00AF7A83 /* AppDelegate.swift */; };
 		E78AF7941EA91D8F00AF7A83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78AF7931EA91D8F00AF7A83 /* ViewController.swift */; };
 		E78AF7971EA91D8F00AF7A83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78AF7951EA91D8F00AF7A83 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 		E78AF7A71EA91D8F00AF7A83 /* Series_CardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78AF7A61EA91D8F00AF7A83 /* Series_CardsTests.swift */; };
 		E78AF7B21EA91D8F00AF7A83 /* Series_CardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78AF7B11EA91D8F00AF7A83 /* Series_CardsUITests.swift */; };
 		E78AF7C01EA91EDA00AF7A83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E78AF7BF1EA91EDA00AF7A83 /* GoogleService-Info.plist */; };
+		E7B2B64F1EA9538100EAB907 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B2B64E1EA9538100EAB907 /* SignUpViewController.swift */; };
+		E7B2B6511EA9557900EAB907 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B2B6501EA9557900EAB907 /* SignInViewController.swift */; };
 		E7EC23E91EA9291A00BA5FC3 /* WordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7EC23E81EA9291A00BA5FC3 /* WordView.xib */; };
 		E7EC23EB1EA92E6C00BA5FC3 /* NewWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EC23EA1EA92E6C00BA5FC3 /* NewWordViewController.swift */; };
 		E7EC23ED1EA9317900BA5FC3 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EC23EC1EA9317900BA5FC3 /* Word.swift */; };
@@ -52,6 +56,9 @@
 		A2E6BEFE0AAA24B3BD9D9724 /* Pods_Series_Cards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Series_Cards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49390F5D6FF6BDF1CB74ABB /* Pods-Series CardsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Series CardsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Series CardsUITests/Pods-Series CardsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CC8FEA4ED1C1E5AEF8F6D54C /* Pods-Series Cards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Series Cards.release.xcconfig"; path = "Pods/Target Support Files/Pods-Series Cards/Pods-Series Cards.release.xcconfig"; sourceTree = "<group>"; };
+		E70EF2D11EA94B0A0045C8C1 /* Series Cards.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Series Cards.entitlements"; sourceTree = "<group>"; };
+		E70EF2D21EA94B0C0045C8C1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		E70EF2D41EA94B290045C8C1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E78AF78E1EA91D8F00AF7A83 /* Series Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Series Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78AF7911EA91D8F00AF7A83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E78AF7931EA91D8F00AF7A83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +73,8 @@
 		E78AF7B11EA91D8F00AF7A83 /* Series_CardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series_CardsUITests.swift; sourceTree = "<group>"; };
 		E78AF7B31EA91D8F00AF7A83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E78AF7BF1EA91EDA00AF7A83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E7B2B64E1EA9538100EAB907 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E7B2B6501EA9557900EAB907 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		E7EC23E81EA9291A00BA5FC3 /* WordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordView.xib; sourceTree = "<group>"; };
 		E7EC23EA1EA92E6C00BA5FC3 /* NewWordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWordViewController.swift; sourceTree = "<group>"; };
 		E7EC23EC1EA9317900BA5FC3 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
@@ -79,6 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6302EA995F19537F4EEB4BF9 /* Pods_Series_Cards.framework in Frameworks */,
+				E70EF2D31EA94B0C0045C8C1 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +114,7 @@
 		031BBB3CA8A8B25F1B25F629 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E70EF2D21EA94B0C0045C8C1 /* CloudKit.framework */,
 				A2E6BEFE0AAA24B3BD9D9724 /* Pods_Series_Cards.framework */,
 				59EE2BF49AE5397F3F9A81C8 /* Pods_Series_CardsTests.framework */,
 				404C54BC0BA55EF3142F044A /* Pods_Series_CardsUITests.framework */,
@@ -149,6 +160,7 @@
 		E78AF7901EA91D8F00AF7A83 /* Series Cards */ = {
 			isa = PBXGroup;
 			children = (
+				E70EF2D11EA94B0A0045C8C1 /* Series Cards.entitlements */,
 				E78AF7911EA91D8F00AF7A83 /* AppDelegate.swift */,
 				E78AF7931EA91D8F00AF7A83 /* ViewController.swift */,
 				E78AF7951EA91D8F00AF7A83 /* Main.storyboard */,
@@ -160,7 +172,10 @@
 				E7EC23EA1EA92E6C00BA5FC3 /* NewWordViewController.swift */,
 				E7F536181EA9425F0052666F /* WordView.swift */,
 				E7EC23EC1EA9317900BA5FC3 /* Word.swift */,
+				E70EF2D41EA94B290045C8C1 /* User.swift */,
 				E7F536161EA9349F0052666F /* FirebaseModel.swift */,
+				E7B2B64E1EA9538100EAB907 /* SignUpViewController.swift */,
+				E7B2B6501EA9557900EAB907 /* SignInViewController.swift */,
 			);
 			path = "Series Cards";
 			sourceTree = "<group>";
@@ -262,6 +277,14 @@
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = QMRXG7JS2X;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					E78AF7A11EA91D8F00AF7A83 = {
 						CreatedOnToolsVersion = 8.3.1;
@@ -471,10 +494,13 @@
 			files = (
 				E78AF7941EA91D8F00AF7A83 /* ViewController.swift in Sources */,
 				E7EC23ED1EA9317900BA5FC3 /* Word.swift in Sources */,
+				E7B2B64F1EA9538100EAB907 /* SignUpViewController.swift in Sources */,
 				E7F536191EA942600052666F /* WordView.swift in Sources */,
 				E78AF7921EA91D8F00AF7A83 /* AppDelegate.swift in Sources */,
+				E7B2B6511EA9557900EAB907 /* SignInViewController.swift in Sources */,
 				E7EC23EB1EA92E6C00BA5FC3 /* NewWordViewController.swift in Sources */,
 				E7F536171EA9349F0052666F /* FirebaseModel.swift in Sources */,
+				E70EF2D51EA94B290045C8C1 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +655,7 @@
 			baseConfigurationReference = 88AD60A0766A7595AD8CE65C /* Pods-Series Cards.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Series Cards/Series Cards.entitlements";
 				DEVELOPMENT_TEAM = QMRXG7JS2X;
 				INFOPLIST_FILE = "Series Cards/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -644,6 +671,7 @@
 			baseConfigurationReference = CC8FEA4ED1C1E5AEF8F6D54C /* Pods-Series Cards.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Series Cards/Series Cards.entitlements";
 				DEVELOPMENT_TEAM = QMRXG7JS2X;
 				INFOPLIST_FILE = "Series Cards/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;

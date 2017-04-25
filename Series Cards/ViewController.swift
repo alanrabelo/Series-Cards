@@ -8,6 +8,7 @@
 
 import UIKit
 import Koloda
+import FirebaseAuth
 
 private var numberOfCards: Int = 5
 
@@ -17,6 +18,9 @@ class ViewController: UIViewController {
     fileprivate var dataSource: [Word] = []
     
     override func viewDidLoad() {
+        
+        User.verifyiCloud()
+        
         super.viewDidLoad()
         kolodaView.delegate = self
         kolodaView.dataSource = self
@@ -28,10 +32,20 @@ class ViewController: UIViewController {
             self.dataSource = words as! [Word]
             self.kolodaView.reloadData()
         }
+        
+        
 
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func addNewWord(_ sender: Any) {
+
+        if FIRAuth.auth()!.currentUser != nil {
+            self.performSegue(withIdentifier: "newWord", sender: nil)
+        } else {
+            performSegue(withIdentifier: "ShowAuthentication", sender: nil)
+        }
+    }
 }
 
 extension ViewController: KolodaViewDelegate {

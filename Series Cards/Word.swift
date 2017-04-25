@@ -12,7 +12,8 @@ import Firebase
 class Word : FirebaseModel {
     var word : String!
     var translation : String!
-    var translationDescription : String!
+    var translationDescription : String?
+    var user : String!
     
     
     init(withWord word : String, andTranslation translation : String, andTranslationDescription translationDescription : String) {
