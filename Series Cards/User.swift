@@ -22,15 +22,17 @@ class User : FirebaseModel {
     }
     
     static func verifyiCloud() {
+        
         if UserDefaults.standard.value(forKey: "id") == nil {
             CKContainer.default().fetchUserRecordID { (id, error) in
+                
                 
                 var userId : String
                 
                 if error != nil {
                     print("Error fetching user icloud - \(error!.localizedDescription)")
-                    let idFirebase = FIRDatabase.database().reference().childByAutoId().description().components(separatedBy: ".").last!
-                    UserDefaults.standard.set(id, forKey: "id")
+                    let idFirebase = FIRDatabase.database().reference().childByAutoId().key
+                    UserDefaults.standard.set(idFirebase, forKey: "id")
                     userId = idFirebase
                 } else {
                     UserDefaults.standard.set(id!.recordName, forKey: "id")

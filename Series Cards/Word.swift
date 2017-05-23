@@ -20,10 +20,11 @@ class Word : FirebaseModel {
         self.word = word
         self.translation = translation
         self.translationDescription = translationDescription
+        self.user = UserDefaults.standard.value(forKey: "id") as! String
     }
     
     required override init() {
-        
+        self.user = UserDefaults.standard.value(forKey: "id") as! String
     }
     
     

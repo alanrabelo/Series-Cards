@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FIRApp.configure()
         FIRDatabase.database().persistenceEnabled = true
+        
+        
+        User.verifyiCloud()
+        
         FIRAuth.auth()!.signInAnonymously(completion: { (user, error) in
             if error != nil {
                 print(error!.localizedDescription)

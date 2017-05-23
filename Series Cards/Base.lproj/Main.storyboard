@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cwv-hO-oGu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ev0-yR-RsR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Suas Palavras-->
+        <!--YOUR WORDS-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Series_Cards" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,19 +24,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EFY-0O-6O5" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="16" y="90" width="343" height="504"/>
+                                <rect key="frame" x="16" y="126" width="343" height="517"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="08s-al-1fv">
+                                <rect key="frame" x="103" y="82" width="168" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="syh-Ry-tHb"/>
+                                    <constraint firstAttribute="width" constant="168" id="yQe-FB-5mp"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Local"/>
+                                    <segment title="Global"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeWordsScope:" destination="BYZ-38-t0r" eventType="valueChanged" id="S30-1G-Q3b"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.5147128807106599" green="0.026038041135941391" blue="0.15789233731085273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="EFY-0O-6O5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="90" id="22p-Eg-4RS"/>
+                            <constraint firstItem="EFY-0O-6O5" firstAttribute="top" secondItem="08s-al-1fv" secondAttribute="bottom" constant="16" id="9B3-w4-n1J"/>
+                            <constraint firstItem="08s-al-1fv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="Gwt-ZG-DXX"/>
                             <constraint firstItem="EFY-0O-6O5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="NIh-cm-ffU"/>
                             <constraint firstAttribute="trailing" secondItem="EFY-0O-6O5" secondAttribute="trailing" constant="16" id="TS1-xT-9X8"/>
+                            <constraint firstItem="08s-al-1fv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eIj-mE-AwG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EFY-0O-6O5" secondAttribute="bottom" constant="24" id="qzr-CW-W1Z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Suas Palavras" id="dfs-1r-COU">
+                    <navigationItem key="navigationItem" title="YOUR WORDS" id="dfs-1r-COU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vYf-VV-HHE">
                             <connections>
                                 <action selector="addNewWord:" destination="BYZ-38-t0r" id="POS-1r-zwf"/>
@@ -47,34 +63,11 @@
                     <connections>
                         <outlet property="kolodaView" destination="EFY-0O-6O5" id="ViW-OG-dAW"/>
                         <segue destination="je4-HS-1DX" kind="presentation" identifier="newWord" id="zmC-Sz-K1Q"/>
-                        <segue destination="qaB-fs-JKR" kind="presentation" identifier="ShowAuthentication" id="Nkk-zD-gNb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2015.2" y="131.78410794602701"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="D0O-EW-0ay">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Cwv-hO-oGu" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="roa-Pk-cvV">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.92410999540000005" green="0.041183643040000002" blue="0.26626214390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="selectedImageTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="ev0-yR-RsR" kind="relationship" relationship="viewControllers" id="Rde-6q-3FY"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DLt-nm-r48" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
         </scene>
         <!--Item-->
         <scene sceneID="DBh-Fx-56n">
@@ -123,13 +116,13 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Nova Palavra" id="pJc-KO-vL1">
+                                    <navigationItem title="NEW WORD" id="pJc-KO-vL1">
                                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="ExH-oS-BrA">
                                             <connections>
                                                 <action selector="exit:" destination="je4-HS-1DX" id="ZPw-Di-CoU"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="Xgq-TN-2ui">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Xgq-TN-2ui">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="saveWord:" destination="je4-HS-1DX" id="Bnj-J2-eh6"/>
@@ -142,7 +135,7 @@
                                     <outletCollection property="gestureRecognizers" destination="JtQ-mQ-xqJ" appends="YES" id="5Qh-9x-FY8"/>
                                 </connections>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Palavra em Inglês" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6it-b3-seu">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENGLISH WORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6it-b3-seu">
                                 <rect key="frame" x="16" y="86" width="343" height="40"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -155,7 +148,7 @@
                                     <action selector="changedWord:" destination="je4-HS-1DX" eventType="editingChanged" id="gFW-5R-Mje"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tradução" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bwZ-Qb-vEc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TRANSLATION TO PORTUGUESE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bwZ-Qb-vEc">
                                 <rect key="frame" x="16" y="134" width="343" height="40"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -429,8 +422,5 @@
     <resources>
         <image name="HOME" width="32" height="32"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="P9k-fI-hfM"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

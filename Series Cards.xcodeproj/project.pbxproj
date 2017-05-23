@@ -12,6 +12,7 @@
 		914CF65335CCFBB526959229 /* Pods_Series_CardsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EE2BF49AE5397F3F9A81C8 /* Pods_Series_CardsTests.framework */; };
 		E70EF2D31EA94B0C0045C8C1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70EF2D21EA94B0C0045C8C1 /* CloudKit.framework */; };
 		E70EF2D51EA94B290045C8C1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70EF2D41EA94B290045C8C1 /* User.swift */; };
+		E78A98D11ED4D1C700885F46 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78A98D01ED4D1C700885F46 /* Extensions.swift */; };
 		E78AF7921EA91D8F00AF7A83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78AF7911EA91D8F00AF7A83 /* AppDelegate.swift */; };
 		E78AF7941EA91D8F00AF7A83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78AF7931EA91D8F00AF7A83 /* ViewController.swift */; };
 		E78AF7971EA91D8F00AF7A83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E78AF7951EA91D8F00AF7A83 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		E70EF2D11EA94B0A0045C8C1 /* Series Cards.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Series Cards.entitlements"; sourceTree = "<group>"; };
 		E70EF2D21EA94B0C0045C8C1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		E70EF2D41EA94B290045C8C1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E78A98D01ED4D1C700885F46 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E78AF78E1EA91D8F00AF7A83 /* Series Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Series Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78AF7911EA91D8F00AF7A83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E78AF7931EA91D8F00AF7A83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,51 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E78A98CB1ED4D15900885F46 /* RESOURCES */ = {
+			isa = PBXGroup;
+			children = (
+				E78AF7BF1EA91EDA00AF7A83 /* GoogleService-Info.plist */,
+				E70EF2D11EA94B0A0045C8C1 /* Series Cards.entitlements */,
+				E78AF7911EA91D8F00AF7A83 /* AppDelegate.swift */,
+				E78AF79D1EA91D8F00AF7A83 /* Info.plist */,
+			);
+			name = RESOURCES;
+			sourceTree = "<group>";
+		};
+		E78A98CC1ED4D16F00885F46 /* MODEL */ = {
+			isa = PBXGroup;
+			children = (
+				E7F536161EA9349F0052666F /* FirebaseModel.swift */,
+				E7EC23EC1EA9317900BA5FC3 /* Word.swift */,
+				E70EF2D41EA94B290045C8C1 /* User.swift */,
+			);
+			name = MODEL;
+			sourceTree = "<group>";
+		};
+		E78A98CD1ED4D17F00885F46 /* VIEW */ = {
+			isa = PBXGroup;
+			children = (
+				E78AF7981EA91D8F00AF7A83 /* Assets.xcassets */,
+				E78AF7951EA91D8F00AF7A83 /* Main.storyboard */,
+				E78AF79A1EA91D8F00AF7A83 /* LaunchScreen.storyboard */,
+				E7EC23E81EA9291A00BA5FC3 /* WordView.xib */,
+			);
+			name = VIEW;
+			sourceTree = "<group>";
+		};
+		E78A98CE1ED4D19000885F46 /* CONTROLLER */ = {
+			isa = PBXGroup;
+			children = (
+				E78AF7931EA91D8F00AF7A83 /* ViewController.swift */,
+				E7EC23EA1EA92E6C00BA5FC3 /* NewWordViewController.swift */,
+				E7F536181EA9425F0052666F /* WordView.swift */,
+				E7B2B64E1EA9538100EAB907 /* SignUpViewController.swift */,
+				E7B2B6501EA9557900EAB907 /* SignInViewController.swift */,
+				E78A98D01ED4D1C700885F46 /* Extensions.swift */,
+			);
+			name = CONTROLLER;
+			sourceTree = "<group>";
+		};
 		E78AF7851EA91D8F00AF7A83 = {
 			isa = PBXGroup;
 			children = (
@@ -160,22 +207,10 @@
 		E78AF7901EA91D8F00AF7A83 /* Series Cards */ = {
 			isa = PBXGroup;
 			children = (
-				E70EF2D11EA94B0A0045C8C1 /* Series Cards.entitlements */,
-				E78AF7911EA91D8F00AF7A83 /* AppDelegate.swift */,
-				E78AF7931EA91D8F00AF7A83 /* ViewController.swift */,
-				E78AF7951EA91D8F00AF7A83 /* Main.storyboard */,
-				E78AF7981EA91D8F00AF7A83 /* Assets.xcassets */,
-				E78AF7BF1EA91EDA00AF7A83 /* GoogleService-Info.plist */,
-				E78AF79A1EA91D8F00AF7A83 /* LaunchScreen.storyboard */,
-				E78AF79D1EA91D8F00AF7A83 /* Info.plist */,
-				E7EC23E81EA9291A00BA5FC3 /* WordView.xib */,
-				E7EC23EA1EA92E6C00BA5FC3 /* NewWordViewController.swift */,
-				E7F536181EA9425F0052666F /* WordView.swift */,
-				E7EC23EC1EA9317900BA5FC3 /* Word.swift */,
-				E70EF2D41EA94B290045C8C1 /* User.swift */,
-				E7F536161EA9349F0052666F /* FirebaseModel.swift */,
-				E7B2B64E1EA9538100EAB907 /* SignUpViewController.swift */,
-				E7B2B6501EA9557900EAB907 /* SignInViewController.swift */,
+				E78A98CC1ED4D16F00885F46 /* MODEL */,
+				E78A98CD1ED4D17F00885F46 /* VIEW */,
+				E78A98CE1ED4D19000885F46 /* CONTROLLER */,
+				E78A98CB1ED4D15900885F46 /* RESOURCES */,
 			);
 			path = "Series Cards";
 			sourceTree = "<group>";
@@ -497,6 +532,7 @@
 				E7B2B64F1EA9538100EAB907 /* SignUpViewController.swift in Sources */,
 				E7F536191EA942600052666F /* WordView.swift in Sources */,
 				E78AF7921EA91D8F00AF7A83 /* AppDelegate.swift in Sources */,
+				E78A98D11ED4D1C700885F46 /* Extensions.swift in Sources */,
 				E7B2B6511EA9557900EAB907 /* SignInViewController.swift in Sources */,
 				E7EC23EB1EA92E6C00BA5FC3 /* NewWordViewController.swift in Sources */,
 				E7F536171EA9349F0052666F /* FirebaseModel.swift in Sources */,

@@ -14,6 +14,6 @@ class WordView: UIView {
     @IBOutlet weak var labelWord: UILabel!
     
     @IBOutlet weak var labelTranslation: UILabel!
-    @IBOutlet weak var labelDescription: UITextView!
+    @IBOutlet weak var labelDescription: UILabel!
     
 }

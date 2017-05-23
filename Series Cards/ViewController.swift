@@ -6,6 +6,11 @@
 //  Copyright © 2017 Alan Rabelo Martins. All rights reserved.
 //
 
+enum Localization {
+    case local
+    case global
+}
+
 import UIKit
 import Koloda
 import FirebaseAuth
@@ -16,6 +21,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var kolodaView: KolodaView!
     
     fileprivate var dataSource: [Word] = []
+    fileprivate var globalDataSource: [Word] = []
+    fileprivate var userName : String!
+    fileprivate var localization : Localization = .local
     
     override func viewDidLoad() {
         
@@ -25,12 +33,31 @@ class ViewController: UIViewController {
         kolodaView.delegate = self
         kolodaView.dataSource = self
         
+        if let userID = UserDefaults.standard.value(forKey: "id") as? String {
+            self.userName = userID
+        } else {
+            self.userName = ""
+        }
         
         self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
         
         Word.all { words in
-            self.dataSource = words as! [Word]
-            self.kolodaView.reloadData()
+            
+            self.dataSource = (words as! [Word]).filter({ (word) -> Bool in
+                return word.user == self.userName
+            })
+            
+            self.globalDataSource = (words as! [Word]).filter({ (word) -> Bool in
+                return word.user != self.userName
+            })
+            
+            self.dataSource.shuffle()
+            self.globalDataSource.shuffle()
+            
+            DispatchQueue.main.async {
+                self.kolodaView.reloadData()
+            }
+            
         }
         
         
@@ -38,6 +65,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func changeWordsScope(_ sender: UISegmentedControl) {
+        localization = sender.selectedSegmentIndex == 0 ? .local : .global
+        self.kolodaView.resetCurrentCardIndex()
+        self.kolodaView.reloadData()
+    }
+    
     @IBAction func addNewWord(_ sender: Any) {
 
         if FIRAuth.auth()!.currentUser != nil {
@@ -76,16 +109,17 @@ extension ViewController: KolodaViewDelegate {
 extension ViewController: KolodaViewDataSource {
     
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
-        return dataSource.count
+        return localization == .local ? dataSource.count : globalDataSource.count
     }
     
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
         return .default
     }
     
+    
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         
-        let currentWord = self.dataSource[index]
+        let currentWord = localization == .local ? dataSource[index] : globalDataSource[index]
         let view = Bundle.main.loadNibNamed("WordView", owner: nil, options: nil)?.first! as! WordView
         view.labelWord.text = currentWord.word
         view.labelTranslation.text = currentWord.translation

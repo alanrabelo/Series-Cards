@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,37 +38,31 @@
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIZ-kL-fMl">
                     <rect key="frame" x="0.0" y="267" width="375" height="400"/>
                     <subviews>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NG-w5-DvJ">
-                            <rect key="frame" x="8" y="260" width="359" height="132"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                            <color key="textColor" red="0.0037138022087388942" green="0.36264673223350252" blue="0.025788581360224737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        </textView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vestir-se" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="i88-Rg-0Rt">
-                            <rect key="frame" x="8" y="8" width="359" height="251"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="251" id="7ve-3Z-eJw"/>
-                            </constraints>
+                            <rect key="frame" x="8" y="8" width="359" height="347"/>
                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="53"/>
                             <color key="textColor" red="0.0033361788390000001" green="0.4490997779" blue="0.024920371199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Descrição da palavra" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O02-jh-Idn">
+                            <rect key="frame" x="8" y="362.5" width="359" height="19.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" id="jOt-g9-lgy"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                            <color key="textColor" red="0.056355290114879608" green="0.43566566705703735" blue="0.070818968117237091" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="3NG-w5-DvJ" firstAttribute="top" secondItem="i88-Rg-0Rt" secondAttribute="bottom" constant="1" id="LwO-8B-xRN"/>
-                        <constraint firstAttribute="trailing" secondItem="3NG-w5-DvJ" secondAttribute="trailing" constant="8" id="Ofj-Dd-YV5"/>
-                        <constraint firstItem="3NG-w5-DvJ" firstAttribute="leading" secondItem="BIZ-kL-fMl" secondAttribute="leading" constant="8" id="P3D-Dc-Smg"/>
-                        <constraint firstItem="i88-Rg-0Rt" firstAttribute="leading" secondItem="BIZ-kL-fMl" secondAttribute="leading" constant="8" id="Rp4-ZQ-y94"/>
-                        <constraint firstAttribute="bottom" secondItem="3NG-w5-DvJ" secondAttribute="bottom" constant="8" id="Wqr-lh-dTa"/>
-                        <constraint firstAttribute="trailing" secondItem="i88-Rg-0Rt" secondAttribute="trailing" constant="8" id="Zuo-PA-8aC"/>
-                        <constraint firstItem="i88-Rg-0Rt" firstAttribute="top" secondItem="BIZ-kL-fMl" secondAttribute="top" constant="8" id="bhr-Uc-9Kq"/>
-                        <constraint firstAttribute="trailing" secondItem="i88-Rg-0Rt" secondAttribute="trailing" constant="8" id="ecJ-jV-lCi"/>
-                        <constraint firstItem="i88-Rg-0Rt" firstAttribute="leading" secondItem="BIZ-kL-fMl" secondAttribute="leading" constant="8" id="uJR-TE-meA"/>
-                        <constraint firstItem="3NG-w5-DvJ" firstAttribute="top" secondItem="i88-Rg-0Rt" secondAttribute="bottom" constant="1" id="va8-dj-FOm"/>
-                        <constraint firstItem="i88-Rg-0Rt" firstAttribute="top" secondItem="BIZ-kL-fMl" secondAttribute="top" constant="8" id="zt8-f6-kgO"/>
+                        <constraint firstItem="i88-Rg-0Rt" firstAttribute="trailing" secondItem="BIZ-kL-fMl" secondAttribute="trailingMargin" id="Ieh-8g-LBw"/>
+                        <constraint firstAttribute="trailing" secondItem="O02-jh-Idn" secondAttribute="trailing" constant="8" id="O5W-dP-PuY"/>
+                        <constraint firstItem="i88-Rg-0Rt" firstAttribute="top" secondItem="BIZ-kL-fMl" secondAttribute="topMargin" id="V0q-RL-7g3"/>
+                        <constraint firstItem="O02-jh-Idn" firstAttribute="top" secondItem="i88-Rg-0Rt" secondAttribute="bottom" constant="7.5" id="Z5L-Ys-U24"/>
+                        <constraint firstItem="i88-Rg-0Rt" firstAttribute="leading" secondItem="BIZ-kL-fMl" secondAttribute="leadingMargin" id="cOK-84-p5O"/>
+                        <constraint firstAttribute="bottom" secondItem="O02-jh-Idn" secondAttribute="bottom" constant="18" id="e4h-hm-Jbh"/>
+                        <constraint firstItem="O02-jh-Idn" firstAttribute="leading" secondItem="BIZ-kL-fMl" secondAttribute="leading" constant="8" id="kZO-mP-7ni"/>
                     </constraints>
                 </view>
             </subviews>
@@ -88,7 +83,7 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
-                <outlet property="labelDescription" destination="3NG-w5-DvJ" id="qIo-tM-vzO"/>
+                <outlet property="labelDescription" destination="O02-jh-Idn" id="rnA-EZ-jcK"/>
                 <outlet property="labelTranslation" destination="i88-Rg-0Rt" id="GtU-x4-SX3"/>
                 <outlet property="labelWord" destination="n5s-lH-mmJ" id="o8o-hB-wR8"/>
             </connections>

@@ -37,9 +37,7 @@ class NewWordViewController: UIViewController {
     }
     
     func resignTextFields()  {
-        textFieldWord.resignFirstResponder()
-        textFieldTranslation.resignFirstResponder()
-        textViewDescription.resignFirstResponder()
+        view.endEditing(true)
     }
     
     @IBAction func exit(_ sender: UIBarButtonItem) {
